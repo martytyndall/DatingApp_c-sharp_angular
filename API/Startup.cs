@@ -35,6 +35,7 @@ namespace API
             });
 
             services.AddControllers();
+            services.AddCors();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
@@ -54,6 +55,10 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            // CORS = cross origin security support. This statement allows any header and method to be used between origins.
+            // must be placed between UseRouting and UseEndpoints.
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200"));
 
             app.UseAuthorization();
 
