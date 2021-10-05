@@ -1,0 +1,11 @@
+.me-auto{
+    margin-right: auto !important;
+}
+
+form *{
+    margin-left: 10px;
+}
+
+.dropdown-toggle, .dropdown-item{
+    cursor: pointer;
+}
