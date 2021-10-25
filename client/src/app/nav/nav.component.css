@@ -8,4 +8,5 @@ form *{
 
 .dropdown-toggle, .dropdown-item{
     cursor: pointer;
+    text-decoration: none;
 }
